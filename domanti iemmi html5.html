@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function copiaLink() {
+  var url = window.location.href; // Ottiene l'URL della pagina corrente
+  var dummy = document.createElement('input'); // Crea un elemento input temporaneo
+  document.body.appendChild(dummy);
+  dummy.value = url; // Assegna l'URL come valore dell'input
+  dummy.select(); // Seleziona il contenuto dell'input
+  document.execCommand('copy'); // Copia il contenuto selezionato nella clipboard
+  document.body.removeChild(dummy); // Rimuove l'elemento input temporaneo
+  alert("Link copiato: " + url); // Opzionale: mostra un messaggio di conferma
+}
+</script>
+<!-- Correzione dell'attributo charset -->
+<meta charset="utf-8" />
+<title>Pagina Titolo</title>
+
+<!-- Spostamento dell'elemento style all'interno del head -->
+<style>
+body {background-color:black; color:white}
+h1 {color:green}
+h2 {color:white}
+h3 {color:red}
+h4 {color:green}
+h5 {color:white}
+h6 {color:red}
+p {color:yellow}
+</style>
+</head>
+<body>
+ 
+<h1>Paese: Italia</h1> <h2>Regione: Lombardia</h2> <h3>Provincia: Varese</h3> 
+<h4>Città: Varese</h4> <h5>Quartiere: Zona 3</h5> <h6>Via: Napoli Colera 66</h6> <p>Testo di 
+dimensione normale</p>
+
+<!-- Correzione degli attributi width e alt -->
+<a href="https://www.x.com/">
+  <img src="twitter_image_url" alt="Twitter" width="70" height="70">
+</a>
+
+<a href="https://www.facebook.com">
+  <img src="facebook_image_url" alt="Facebook" width="80" height="70">
+</a>
+
+<a href="https://www.reddit.com">
+  <img src="reddit_image_url" alt="Reddit" width="70" height="70">
+</a>
+
+<img src="copy_link_image_url" alt="Copia Link" width="70" height="70" onclick="copiaLink()" style="cursor: pointer;"/>
+
+<img src="bullz_image_url" alt="Ma che belli i bullz" width="70" height="70"/>
+
+<ul>
+<li>Pane</li>
+<li>Acqua</li>
+<li>Uova</li>
+<li>Latte</li>
+<li>Biscotti</li>
+</ul>
+ 
+<table>
+<tr>
+<td>X</td> <td>X</td><td>O</td>
+</tr>
+<tr>
+<td>O</td> <td> </td><td>X</td>
+</tr>
+<tr>
+<td>X</td> <td>O</td><td>O</td>
+</tr>
+</table>
+ 
+</body>
+</html>
